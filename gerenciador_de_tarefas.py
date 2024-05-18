@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-# Função para adicionar tarefa
+# Adicionar tarefa
 def adicionar_tarefa(tarefas, nome_tarefa):
     tarefa = {"tarefa": nome_tarefa, "completada": False}
     tarefas.append(tarefa)
@@ -8,7 +8,7 @@ def adicionar_tarefa(tarefas, nome_tarefa):
     return
 
 
-# Função para consultar tarefas
+# Consultar tarefas
 def ver_tarefas(tarefas):
     print("\nLista de tarefas:")
     for idx, tarefa in enumerate(tarefas, start=1):
@@ -17,7 +17,7 @@ def ver_tarefas(tarefas):
         print(f"{idx}. [{status}] {nome_tarefa}")
 
 
-# Função para atualizar tarefa
+# Atualizar tarefa
 def atualizar_nome_tarefa(tarefas, indice_tarefa, novo_nome_tarefa):
     indice_tarefa_ajustado = indice_tarefa - 1
     tarefas[indice_tarefa_ajustado]["tarefa"] = novo_nome_tarefa
@@ -25,14 +25,14 @@ def atualizar_nome_tarefa(tarefas, indice_tarefa, novo_nome_tarefa):
     return
 
 
-# Função para finalizar as tarefas
+# Finalizar as tarefas
 def completar_tarefas(tarefas, indice_tarefa):
     indice_tarefa_ajustado = indice_tarefa - 1
     tarefas[indice_tarefa_ajustado]["completada"] = True
     return
 
 
-# Função para deletar tarefas finalizadas
+# Deletar tarefas finalizadas
 def deletar_tarefas_finalizadas(tarefas):
     for tarefa in tarefas:
         if tarefa["completada"]:
